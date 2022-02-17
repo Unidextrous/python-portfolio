@@ -6,11 +6,11 @@ elif ai_pick == 1:
     ai_pick = "paper"
 else:
     ai_pick = "scissors"
-print(ai_pick) #for debugging or if you don't want to guess
+#print(ai_pick) #for debugging or if you don't want to guess
 player_pick = input("Rock, paper, or scissors? ")
 player_pick = player_pick.lower()
 if player_pick == ai_pick:
-    print("draw")
+    print("Draw")
 elif player_pick == "rock" and ai_pick == "scissors":
     print("You won!")
 elif player_pick == "paper" and ai_pick == "rock":
