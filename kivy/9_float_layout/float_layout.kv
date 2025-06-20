@@ -1,0 +1,36 @@
+#:kivy 2.3.1
+
+<Button>:
+    font_size: 32
+    size_hint: (0.3, 0.3)
+
+<MyLayout>
+    FloatLayout:
+        background_color: (50/255, 50/255, 50/255, 1)
+        canvas.before:
+            Color:
+                rgba: self.background_color
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        size: root.width, root.height
+
+        Button:
+            text: "Top Left"
+            pos_hint: {"x": 0, "y": 0.7}
+        
+        Button:
+            text: "Top Right"
+            pos_hint: {"x": 0.7, "y": 0.7}
+
+        Button:
+            text: "Center"
+            pos_hint: {"x": 0.35, "y": 0.35}
+
+        Button:
+            text: "Bottom Left"
+            pos_hint: {"x": 0, "y": 0}
+        
+        Button:
+            text: "Bottom Right"
+            pos_hint: {"x": 0.7, "y": 0}
