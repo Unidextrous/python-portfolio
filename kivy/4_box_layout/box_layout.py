@@ -2,7 +2,7 @@ from kivy.app import App
 from kivy.uix.widget import Widget
 from kivy.lang import Builder
 
-Builder.load_file('box.kv')
+Builder.load_file('box_layout.kv')
 
 class MyLayout(Widget):
     pass

@@ -1,6 +1,6 @@
-#:kivy 2.3.1
 #:import utils kivy.utils
 
+# Define the layout rules for MyGridLayout
 <MyGridLayout>:
     name: name
     color: color
@@ -28,7 +28,13 @@
             text: "Submit"
             font_size: 32
             background_normal: ""
+
+            # Background color can be set using either of the following:
+
+            # Method 1: RGBA tuple (red, green, blue, alpha)
             background_color: (0, 0, 1, 1)
+
+            # Method 2: Using Kivy's utility function to convert hex to RGBA
             background_color: utils.get_color_from_hex("#0000ff")
 
             on_press: root.press()

@@ -1,10 +1,11 @@
 import kivy
 from kivy.app import App
-from kivy.uix.label import Label
-from kivy.uix.gridlayout import GridLayout
-from kivy.uix.textinput import TextInput
-from kivy.uix.button import Button
+from kivy.uix.label import Label            # For text display
+from kivy.uix.gridlayout import GridLayout  # For organizing widgets in rows/columns
+from kivy.uix.textinput import TextInput    # For user text input
+from kivy.uix.button import Button          # For interactive buttons
 
+# Define the main layout using a GridLayout
 class MyGridLayout(GridLayout):
     # Initialize infinite keywords
     def __init__(self, **kwargs):
@@ -35,11 +36,15 @@ class MyGridLayout(GridLayout):
         self.submit.bind(on_press=self.press)
         self.add_widget(self.submit)
     
+    # Define the event handler for the button
     def press(self, instance):
         name = self.name.text
         color = self.color.text
+
+        # Display a message with the entered info
         self.add_widget(Label(text=f"Hello {name}, you like {color}"))
 
+        # Clear the input fields
         self.name.text = ""
         self.color.text = ""
 

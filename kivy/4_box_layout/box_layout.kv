@@ -1,25 +1,27 @@
-#:kivy 2.3.1
-
 <MyLayout>:
+    # A vertical BoxLayout that fills the entire screen
     BoxLayout:
         orientation: "vertical"
         size: root.width, root.height
-        padding: 50
-        spacing: 20
+        padding: 50     # Space between layout edges and children
+        spacing: 20     # Space between children
 
+        # Button 1: Half-width and centered
         Button:
             text: "Hello, world!"
-            pos_hint: {"center_x": 0.5}
-            size_hint: (0.5, 0.5)
+            pos_hint: {"center_x": 0.5}     # Horizontally centered
+            size_hint: (0.5, 0.5)           # 50% width, 50% height of parent layout
         
+        # Button 2: Same size as Button 1, different label
         Button:
             text: "Hi, world!"
             pos_hint: {"center_x": 0.5}
             size_hint: (0.5, 0.5)
         
+        # Button 3: Fixed size instead of relative sizing
         Button:
             text: "'Sup, world?"
-            size_hint: (None, None)
+            size_hint: (None, None)         # Disable automatic sizing
             pos_hint: {"center_x": 0.5}
-            width: 100
-            height: 50
+            width: 100                      # Explicit width
+            height: 50                      # Explicit height

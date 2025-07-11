@@ -3,8 +3,10 @@ from kivy.uix.widget import Widget
 from kivy.properties import ObjectProperty
 from kivy.lang import Builder
 
+# Load the corresponding .kv file for layout and styling
 Builder.load_file('color.kv')
 
+# Create a custom widget with references to input fields
 class MyGridLayout(Widget):
     name = ObjectProperty(None)
     color = ObjectProperty(None)

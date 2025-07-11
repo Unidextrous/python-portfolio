@@ -1,29 +1,27 @@
-#:kivy 2.3.1
+<MyGridLayout>:     # Match the class name in design.py
+    name: name      # Link 'name' property in Python to this TextInput
+    color: color    # Link 'color' property in Python to this TextInput
 
-<MyGridLayout>:
-    name: name
-    color: color
-
-    GridLayout:
+    GridLayout:     # Main layout container
         cols: 1
-        size: root.width, root.height
+        size: root.width, root.height   # Make it fill the entire window
 
-        GridLayout:
+        GridLayout:     # Inner layout for labels and text inputs
             cols: 2
 
             Label:
                 text: "Name"
             TextInput:
-                id: name
+                id: name    # This ID is used to link with ObjectProperty in Python
                 multiline: False
 
             Label:
                 text: "Favorite Color"
             TextInput:
-                id: color
+                id: color   # This ID is used to link with ObjectProperty in Python
                 multiline: False
         
         Button:
             text: "Submit"
             font_size: 32
-            on_press: root.press()
+            on_press: root.press()  # Call the press() method in design.py
