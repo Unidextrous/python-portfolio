@@ -13,6 +13,8 @@
         Label:
             text: "Name"
             font_size: 45
+
+            # Add a custom background color using canvas
             background_color: (125/255, 125/255, 125/255, 1)
             canvas.before:
                 Color:
@@ -20,9 +22,10 @@
                 Rectangle:
                     size: self.size
                     pos: self.pos
-            color: (1, 1, 1, 1)
-            bold: True
-            italic: True
+                    
+            color: (1, 1, 1, 1)     # White text
+            bold: True              # Bold text
+            italic: True            # Italic text
             outline_color: (0, 0, 0)
             outline_width: 2
 

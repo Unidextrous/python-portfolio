@@ -1,3 +1,4 @@
+# Customize all Button widgets globally (inheritance)
 <Button>:
     font_size: 32
     background_normal: ""
@@ -23,8 +24,8 @@
             multiline: False
         
         Button:
-            text: "Submit"
+            text: "Submit"  # Inherits blue background and font size from <Button>
         
         Button:
             text: "Clear"
-            background_color: (1, 0, 0, 1)
+            background_color: (1, 0, 0, 1)  # Override inherited blue with red for this button

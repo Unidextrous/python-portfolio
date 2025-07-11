@@ -1,6 +1,6 @@
 <Button>:
     font_size: 32
-    size_hint: (0.3, 0.3)
+    size_hint: (0.3, 0.3)   # Each button takes up 30% width and height of the parent
 
 <MyLayout>
     FloatLayout:
@@ -11,24 +11,30 @@
             Rectangle:
                 size: self.size
                 pos: self.pos
-        size: root.width, root.height
+        size: root.width, root.height   # Match the root widget's size
 
+        # Top-left positioned button
         Button:
             text: "Top Left"
             pos_hint: {"x": 0, "y": 0.7}
         
+        # Top-right positioned button
         Button:
             text: "Top Right"
             pos_hint: {"x": 0.7, "y": 0.7}
 
+        # Center positioned button
         Button:
             text: "Center"
             pos_hint: {"x": 0.35, "y": 0.35}
 
+        # Bottom-left positioned button
         Button:
             text: "Bottom Left"
             pos_hint: {"x": 0, "y": 0}
         
+        
+        # Bottom-right positioned button
         Button:
             text: "Bottom Right"
             pos_hint: {"x": 0.7, "y": 0}
